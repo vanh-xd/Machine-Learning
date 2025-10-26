@@ -36,4 +36,16 @@ def showGraph(x, y, y_predicted, title='', xlabel='', ylabel=''):
     #mean y
     ybar = np.mean(y)
 
-    plt.axhline
+    plt.axhline(ybar, linestyle='--', linewidth=4, label='mean')
+    plt.axis([x_min*0.95, x_max*1.05, y_min*0.95, y_max*1.05])
+    plt.xlabel(xlabel, fontsize=16)
+    plt.ylabel(ylabel, fontsize=16)
+    plt.text(x_min, ybar*1.01, 'mean', fontsize=16)
+    plt.legend(fontsize=15)
+    plt.title(title, fontsize=20)
+    plt.show()
+
+showGraph(x, y, y_predicted,
+          title = 'Y values corresponding to X',
+          xlabel = 'X values',
+          ylabel = 'Y values')
