@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Retail Analytics — Customer Clusters</title>
+  <style>
+    :root {
+      --bg: #0f172a; /* slate-900 */
+      --panel: #111827; /* gray-900 */
+      --text: #e5e7eb; /* gray-200 */
+      --muted: #9ca3af; /* gray-400 */
+      --cyan: #06b6d4; /* cyan-500 */
+      --green: #22c55e; /* green-500 */
+      --border: rgba(229,231,235,.12);
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+    .wrap { max-width: 1200px; margin: 24px auto; padding: 0 16px; }
+    .hero { display:flex; align-items:center; justify-content:space-between; padding: 24px; background: linear-gradient(120deg, rgba(6,182,212,.12), rgba(34,197,94,.12)); border: 1px solid var(--border); border-radius: 18px; }
+    .title { font-size: 24px; font-weight: 800; letter-spacing: .2px; }
+    .subtitle { color: var(--muted); font-size: 14px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; margin-top: 18px; }
+    .card { background: var(--panel); border: 1px solid rgba(229,231,235,.08); border-radius: 14px; padding: 16px; }
+    .card h3 { margin: 0 0 6px 0; font-size: 16px; }
+    .card p { margin: 0 0 12px 0; color: var(--muted); font-size: 13px; }
+    .btns { display:flex; gap: 10px; }
+    .btn { display:inline-flex; align-items:center; gap:8px; text-decoration:none; color:#67e8f9; background: rgba(6,182,212,.14); border: 1px solid rgba(6,182,212,.34); padding: 10px 12px; border-radius: 999px; font-size: 12px; }
+    .btn.secondary { color:#86efac; background: rgba(34,197,94,.14); border-color: rgba(34,197,94,.34); }
+    .footer { margin-top: 20px; color: var(--muted); font-size: 12px; text-align: center; }
+    .note { margin-top: 8px; font-size: 12px; color: var(--muted); }
+    .list { margin-top: 16px; color: var(--muted); font-size: 13px; }
+    code { background: rgba(229,231,235,.08); padding: 2px 6px; border-radius: 6px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="hero">
+      <div>
+        <div class="title">Retail Analytics — Customer Clusters</div>
+        <div class="subtitle">Explore detailed customer lists for each cluster. Data from MySQL <strong>salesdatabase</strong> / <strong>customer</strong>.</div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Clusters (k = 3)</h3>
+        <p>Styled, interactive page with full customer details per cluster.</p>
+        <div class="btns">
+          <a class="btn" href="customer_clusters_k3_web.html">Open k=3 page</a>
+          <a class="btn secondary" href="clusters_k3.html">Basic k=3 page</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Clusters (k = 5)</h3>
+        <p>Styled, interactive page with full customer details per cluster.</p>
+        <div class="btns">
+          <a class="btn" href="customer_clusters_k5_web.html">Open k=5 page</a>
+          <a class="btn secondary" href="clusters_k5.html">Basic k=5 page</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="list">
+      To host locally, serve this folder and visit <code>/index.html</code>:
+      <div class="note">PowerShell: <code>cd e:\K23_mlba\project_retail\ui</code> then <code>python -m http.server 8000</code></div>
+      <div class="note">Open: <code>http://localhost:8000/</code></div>
+    </div>
+
+    <div class="footer">
+      Generated pages are static HTML and can be deployed to any simple web server.
+    </div>
+  </div>
+</body>
+<script>
+  // No JS needed here; links point to generated pages.
+</script>
+</html>
